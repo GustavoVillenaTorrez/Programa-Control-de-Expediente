@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.unam.vistas.ViewsAsistencia">
+   <children>
+      <AnchorPane onKeyReleased="#buscarFecha" prefHeight="200.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@dashboardDesign.css">
+         <children>
+            <AnchorPane layoutX="15.0" layoutY="51.0" prefHeight="540.0" prefWidth="1071.0" stylesheets="@dashboardDesign.css">
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <Label layoutX="17.0" layoutY="323.0" text="Involucrado:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonVolver" layoutX="17.0" layoutY="472.0" mnemonicParsing="false" onAction="#accionVolver" prefHeight="30.0" prefWidth="73.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Volver">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <ComboBox fx:id="conboBoxInvoReunion" layoutX="568.0" layoutY="355.0" onAction="#seleccionReunion" prefHeight="30.0" prefWidth="315.0" promptText="Seleccione Reunion" styleClass="textfield" stylesheets="@dashboardDesign.css" visibleRowCount="0" />
+                  <Label layoutX="568.0" layoutY="323.0" text="Reunion:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonAgregar" layoutX="320.0" layoutY="472.0" mnemonicParsing="false" onAction="#accionAgregar" prefHeight="30.0" prefWidth="73.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Agregar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonActualizar" layoutX="500.0" layoutY="472.0" mnemonicParsing="false" onAction="#accionActualizar" prefHeight="30.0" prefWidth="83.0" styleClass="update-btn" stylesheets="@dashboardDesign.css" text="Actualizar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonEliminar" layoutX="410.0" layoutY="472.0" mnemonicParsing="false" onAction="#accionEliminar" prefHeight="30.0" prefWidth="73.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Eliminar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonLimpiar" layoutX="594.0" layoutY="472.0" mnemonicParsing="false" onAction="#accionLimpiar" prefHeight="30.0" prefWidth="73.0" styleClass="clear-btn" stylesheets="@dashboardDesign.css" text="Limpiar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <ComboBox fx:id="conboBoxInvolucrado" layoutX="17.0" layoutY="355.0" onAction="#seleccionInvolucrado" prefHeight="30.0" prefWidth="315.0" promptText="Seleccione Involucrado" styleClass="textfield" stylesheets="@dashboardDesign.css" visibleRowCount="0" />
+                  <Label layoutX="17.0" layoutY="395.0" text="Fecha:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="campoFecha" layoutX="17.0" layoutY="420.0" onAction="#seleccionFecha" prefHeight="30.0" prefWidth="315.0" promptText="Seleccionar Fecha ..." styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                  <Label layoutX="568.0" layoutY="395.0" text="Presencia:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="campoPresencia" layoutX="568.0" layoutY="420.0" onAction="#seleccionPresencia" prefHeight="30.0" prefWidth="315.0" promptText="Seleccione Si o No" styleClass="textfield" stylesheets="@dashboardDesign.css" visibleRowCount="0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="15.0" layoutY="48.0" prefHeight="316.0" prefWidth="1071.0" stylesheets="@dashboardDesign.css">
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <BorderPane layoutY="54.0" />
+                  <TextField fx:id="textBuscador" layoutX="17.0" layoutY="15.0" onAction="#campoBuscar" onKeyReleased="#buscarFecha" prefHeight="30.0" prefWidth="315.0" promptText="Buscar" styleClass="textfield" stylesheets="@dashboardDesign.css">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="338.0" layoutY="20.0">
+                     <image>
+                        <Image url="@../../../../../../../../Users/gusta/Downloads/59cfc4d2d3b1936210a5ddc7%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <TableView fx:id="tableViewsAsistencia" layoutX="17.0" layoutY="54.0" prefHeight="241.0" prefWidth="1034.0">
+                     <columns>
+                        <TableColumn fx:id="columnaid" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="columnaInvolucrado" prefWidth="331.0" text="Involucrado" />
+                        <TableColumn fx:id="columnaFecha" minWidth="0.0" prefWidth="107.0" text="Fecha" />
+                        <TableColumn fx:id="columnaReunion" prefWidth="420.0" text="Reunion" />
+                        <TableColumn fx:id="columnaPresencia" prefWidth="99.0" text="Presencia" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="15.0" layoutY="9.0" prefHeight="40.0" prefWidth="1071.0" stylesheets="@dashboardDesign.css">
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <Label layoutX="17.0" layoutY="5.0" prefHeight="30.0" prefWidth="148.0" text="Asistencia">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="30.0" fitWidth="45.0" layoutX="1019.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="1027.0" layoutY="8.0">
+                     <image>
+                        <Image url="@../../window_close_icon_135015.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.unam.vistas.ViewsReunion">
+   <children>
+      <AnchorPane fx:id="PanelExpediente" prefHeight="200.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@dashboardDesign.css">
+         <children>
+            <AnchorPane fx:id="PanelExpedienteCampos" layoutX="15.0" layoutY="51.0" prefHeight="540.0" prefWidth="1071.0" stylesheets="@dashboardDesign.css">
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <Label fx:id="TextExpedienteAbierto" layoutX="367.0" layoutY="319.0" text="Seleccione Expediente Abierto:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="TextMiembroConsejo" layoutX="724.0" layoutY="319.0" text="Seleccione Miembro Consejo:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="TextEstado" layoutX="18.0" layoutY="383.0" text="Estado de la Reunion">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="TextInicio" layoutX="20.0" layoutY="441.0" text="Hora inicio">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ButtonVolver" layoutX="14.0" layoutY="498.0" mnemonicParsing="false" onAction="#AccionVolver" prefHeight="30.0" prefWidth="73.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Volver">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonActualizarReunion" layoutX="497.0" layoutY="498.0" mnemonicParsing="false" onAction="#AccionActualizarReunion" prefHeight="30.0" prefWidth="83.0" styleClass="update-btn" stylesheets="@dashboardDesign.css" text="Actualizar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonEliminarReunion" layoutX="407.0" layoutY="498.0" mnemonicParsing="false" onAction="#AccionEliminarReunion" prefHeight="30.0" prefWidth="73.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Eliminar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonLimpiar" layoutX="317.0" layoutY="498.0" mnemonicParsing="false" onAction="#AccionLimpiar" prefHeight="30.0" prefWidth="73.0" styleClass="clear-btn" stylesheets="@dashboardDesign.css" text="Limpiar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonAgregarReunion" layoutX="591.0" layoutY="498.0" mnemonicParsing="false" onAction="#AccionAgregarReunion" prefHeight="30.0" prefWidth="73.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Agregar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <DatePicker fx:id="CampoFecha" layoutX="18.0" layoutY="340.0" onAction="#SeleccionFechaIngreso" prefHeight="30.0" prefWidth="315.0" promptText="Seleccionar Fecha ..." styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                  <Label fx:id="TextFecha" layoutX="18.0" layoutY="324.0" text="Fecha:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboBoxEstado" layoutX="18.0" layoutY="402.0" onAction="#SeleccionExpedienteAbierto" prefHeight="30.0" prefWidth="315.0" promptText="Seleccione Estado..." styleClass="textfield" stylesheets="@dashboardDesign.css" visibleRowCount="0" />
+                  <Spinner fx:id="campoHoraInicio" editable="true" layoutX="18.0" layoutY="460.0" prefHeight="30.0" prefWidth="121.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                  <Spinner fx:id="campoHoraFin" editable="true" layoutX="211.0" layoutY="460.0" prefHeight="30.0" prefWidth="121.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                  <Label fx:id="TextHoraFin" layoutX="211.0" layoutY="441.0" text="Hora Fin">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="listExpedienteAbierto" layoutX="367.0" layoutY="341.0" prefHeight="149.0" prefWidth="324.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                  <ListView fx:id="listMiembroConsejo" layoutX="724.0" layoutY="341.0" prefHeight="149.0" prefWidth="324.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="PanelExpedienteTabla" layoutX="15.0" layoutY="48.0" prefHeight="316.0" prefWidth="1071.0" stylesheets="@dashboardDesign.css">
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <BorderPane layoutY="54.0" />
+                  <TextField fx:id="TextBuscadorExpediente" layoutX="17.0" layoutY="15.0" onAction="#BuscarExpedienteNumero" onKeyReleased="#buscarnroExpediente" prefHeight="30.0" prefWidth="315.0" promptText="Buscar por Fecha..." styleClass="textfield" stylesheets="@dashboardDesign.css">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="338.0" layoutY="20.0">
+                     <image>
+                        <Image url="@../../../../../../../../Users/gusta/Downloads/59cfc4d2d3b1936210a5ddc7%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <TableView fx:id="PanelTablaReunion" layoutX="17.0" layoutY="54.0" prefHeight="241.0" prefWidth="1034.0">
+                     <columns>
+                        <TableColumn fx:id="columnaId" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="columnaFecha" prefWidth="121.0" text="Fecha" />
+                        <TableColumn fx:id="columnaestadoReunion" prefWidth="113.0" text="Estado Reunion" />
+                        <TableColumn fx:id="columnaHorainicio" prefWidth="88.0" text="Hora Inicio" />
+                        <TableColumn fx:id="columnaHoraFin" editable="false" minWidth="2.0" prefWidth="94.0" text="Hora Fin" />
+                        <TableColumn fx:id="columnaExpedientesTratar" prefWidth="277.0" text="Expediente a Tratar" />
+                        <TableColumn fx:id="columnaMiembrosdelConsejo" prefWidth="265.0" text="Miembros Consejo" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="15.0" layoutY="9.0" prefHeight="40.0" prefWidth="1071.0" stylesheets="@dashboardDesign.css">
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <Label layoutX="17.0" layoutY="5.0" prefHeight="30.0" prefWidth="148.0" text="Gestion Reuniones">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="30.0" fitWidth="45.0" layoutX="1019.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="1027.0" layoutY="8.0">
+                     <image>
+                        <Image url="@../../window_close_icon_135015.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.unam.vistas.ViewsInvolucrados">
+   <children>
+      <AnchorPane fx:id="PanelInvolucrado" prefHeight="200.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@dashboardDesign.css">
+         <children>
+            <AnchorPane layoutX="15.0" layoutY="51.0" prefHeight="540.0" prefWidth="1071.0" stylesheets="@dashboardDesign.css">
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <Button fx:id="ButtonVolver" layoutX="13.0" layoutY="498.0" mnemonicParsing="false" onAction="#AccionVolver" prefHeight="30.0" prefWidth="73.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Volver">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="TextExpediente" layoutX="694.0" layoutY="314.0" text="Expediente">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ButtonActualizar" layoutX="496.0" layoutY="498.0" mnemonicParsing="false" onAction="#AccionActualizar" prefHeight="30.0" prefWidth="83.0" styleClass="update-btn" stylesheets="@dashboardDesign.css" text="Actualizar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonEliminar" layoutX="406.0" layoutY="498.0" mnemonicParsing="false" onAction="#AccionEliminar" prefHeight="30.0" prefWidth="73.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Eliminar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="TextNombreCompleto" layoutX="17.0" layoutY="319.0" text="Nombre Completo:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CampoNombreCompeto" layoutX="17.0" layoutY="339.0" onAction="#IngresoNombreCompleto" prefHeight="32.0" prefWidth="315.0" promptText="Ingresar Nombre Completo..." styleClass="textfield" stylesheets="@dashboardDesign.css">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="TextDNI" layoutX="17.0" layoutY="375.0" text="DNI:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CampoDni" layoutX="17.0" layoutY="394.0" onAction="#IngresarDNI" prefHeight="32.0" prefWidth="315.0" promptText="Ingresar DNI..." styleClass="textfield" stylesheets="@dashboardDesign.css">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="TexttTlefono" layoutX="17.0" layoutY="432.0" text="Telefono">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CampoTelefono" layoutX="17.0" layoutY="451.0" onAction="#IngresarDNI" prefHeight="32.0" prefWidth="315.0" promptText="Ingresar Telefono..." styleClass="textfield" stylesheets="@dashboardDesign.css">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="TextEmail" layoutX="356.0" layoutY="319.0" text="Correo E-Mail:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CampoCorreo" layoutX="356.0" layoutY="339.0" onAction="#IngresarEmail" prefHeight="32.0" prefWidth="315.0" promptText="Ingresar Correo E-Mail..." styleClass="textfield" stylesheets="@dashboardDesign.css">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="TextRol" layoutX="356.0" layoutY="375.0" text="Rol:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CampoRol" layoutX="356.0" layoutY="394.0" onAction="#IngresarRol" prefHeight="32.0" prefWidth="315.0" promptText="Ingresar Rol..." styleClass="textfield" stylesheets="@dashboardDesign.css">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="ButtonLimpiar" layoutX="316.0" layoutY="498.0" mnemonicParsing="false" onAction="#AccionLimpiar" prefHeight="30.0" prefWidth="73.0" styleClass="clear-btn" stylesheets="@dashboardDesign.css" text="Limpiar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonAgregar" layoutX="590.0" layoutY="498.0" mnemonicParsing="false" onAction="#AccionAgregar" prefHeight="30.0" prefWidth="73.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Agregar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <ListView fx:id="CampoExpediente" layoutX="695.0" layoutY="339.0" prefHeight="143.0" prefWidth="351.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="15.0" layoutY="48.0" prefHeight="316.0" prefWidth="1071.0" stylesheets="@dashboardDesign.css">
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <BorderPane layoutY="54.0" />
+                  <TextField fx:id="TextBuscador" layoutX="17.0" layoutY="15.0" onAction="#CampoBuscarNombre" onKeyReleased="#buscarNombre" prefHeight="30.0" prefWidth="315.0" promptText="Buscar por Nombre Completo..." styleClass="textfield" stylesheets="@dashboardDesign.css">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="338.0" layoutY="20.0">
+                     <image>
+                        <Image url="@../../../../../../../../Users/gusta/Downloads/59cfc4d2d3b1936210a5ddc7%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <TableView fx:id="TablaInvolucrados" layoutX="17.0" layoutY="54.0" prefHeight="241.0" prefWidth="1034.0">
+                     <columns>
+                        <TableColumn fx:id="ColumnaId" prefWidth="45.0" text="ID" />
+                        <TableColumn fx:id="columnaNombreCompleto" prefWidth="113.0" text="Nombre Completo" />
+                        <TableColumn fx:id="ColumnaDni" prefWidth="93.0" text="DNI" />
+                        <TableColumn fx:id="columnaTelefono" prefWidth="116.0" text="Telefono" />
+                        <TableColumn fx:id="columnaCorreo" prefWidth="90.0" text="Correo E-Mails" />
+                        <TableColumn fx:id="ColumnaRol" prefWidth="72.0" text="Rol" />
+                        <TableColumn fx:id="ColumnaEsMiembro" prefWidth="73.0" text="Es Miembro" />
+                        <TableColumn fx:id="columnaExpediente" prefWidth="431.0" text="Expediente" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="TextBuscador1" layoutX="379.0" layoutY="15.0" onAction="#CampoBuscarDni" onKeyReleased="#buscarDni" prefHeight="30.0" prefWidth="315.0" promptText="Buscar por DNI..." styleClass="textfield" stylesheets="@dashboardDesign.css">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="700.0" layoutY="20.0">
+                     <image>
+                        <Image url="@../../../../../../../../Users/gusta/Downloads/59cfc4d2d3b1936210a5ddc7%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="15.0" layoutY="9.0" prefHeight="40.0" prefWidth="1071.0" stylesheets="@dashboardDesign.css">
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <Label layoutX="17.0" layoutY="5.0" prefHeight="30.0" prefWidth="148.0" text="Involucrados">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="30.0" fitWidth="45.0" layoutX="1019.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="1027.0" layoutY="8.0">
+                     <image>
+                        <Image url="@../../window_close_icon_135015.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label fx:id="TextMiembro" layoutX="370.0" layoutY="481.0" text="Es Miembro:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="CampoMiembro" layoutX="370.0" layoutY="502.0" onAction="#SeleccionMiembro" prefHeight="30.0" prefWidth="315.0" promptText="Seleccione Si/No..." styleClass="textfield" stylesheets="@dashboardDesign.css" visibleRowCount="0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
